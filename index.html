@@ -8,29 +8,37 @@
 </head>
 <body>
 
-  <!-- Particle Canvas -->
-  <canvas id="particle-canvas"></canvas>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
 
   <!-- Intro Logo -->
   <div id="logo">
     <img src="settings/logo.png" alt="ZenoMoz Logo">
   </div>
 
-  <!-- Main Content -->
-  <div id="main-content">
-    <h1>ZenoMoz | Vercel</h1>
-
-    <div class="button-container">
-      <button onclick="openLink('https://example.com')">Button 1</button>
-      <button onclick="openLink('https://example.com')">Button 2</button>
-      <button onclick="openLink('https://example.com')">Button 3</button>
-      <button onclick="openLink('https://example.com')">Button 4</button>
-    </div>
+  <!-- Social Media Buttons -->
+  <div class="social-buttons">
+    <button onclick="openLink('https://twitter.com')">Twitter</button>
+    <button onclick="openLink('https://youtube.com')">YouTube</button>
+    <button onclick="openLink('https://discord.com')">Discord</button>
+    <button onclick="openLink('https://github.com')">GitHub</button>
   </div>
 
-  <!-- Click Sound -->
-  <audio id="click-sound" src="settings/click.mp3"></audio>
+  <!-- Main Buttons -->
+  <div class="main-buttons">
+    <button onclick="openLink('#')">Main 1</button>
+    <button onclick="openLink('#')">Main 2</button>
+    <button onclick="openLink('#')">Main 3</button>
+    <button onclick="openLink('#')">Main 4</button>
+    <button onclick="openLink('#')">Main 5</button>
+  </div>
 
+  <!-- Audio -->
+  <audio id="click-sound" src="settings/click.mp3"></audio>
+  <audio id="select-sound" src="settings/select.mp3"></audio>
+
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
