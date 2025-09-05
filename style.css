@@ -1,0 +1,77 @@
+/* Reset & General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none; /* disables text selection */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Intro Logo */
+#logo {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 10vh;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Main Content */
+#main-content {
+  text-align: center;
+  margin-top: 15vh;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpFadeIn 2s forwards 1s;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+/* Buttons */
+.button-container button {
+  background: linear-gradient(145deg, #111, #333);
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  margin: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.button-container button:hover {
+  background: linear-gradient(145deg, #222, #555);
+}
+
+/* Animations */
+@keyframes slideUpFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
