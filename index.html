@@ -17,12 +17,20 @@
     <img src="settings/logo.png" alt="ZenoMoz Logo">
   </div>
 
-  <!-- Social Media Buttons -->
+  <!-- Social Media Buttons (Images) -->
   <div class="social-buttons">
-    <button onclick="openLink('https://twitter.com')">Twitter</button>
-    <button onclick="openLink('https://youtube.com')">YouTube</button>
-    <button onclick="openLink('https://discord.com')">Discord</button>
-    <button onclick="openLink('https://github.com')">GitHub</button>
+    <button onclick="openLink('https://twitter.com')">
+      <img src="settings/twitter.png" alt="Twitter">
+    </button>
+    <button onclick="openLink('https://youtube.com')">
+      <img src="settings/youtube.png" alt="YouTube">
+    </button>
+    <button onclick="openLink('https://discord.com')">
+      <img src="settings/discord.png" alt="Discord">
+    </button>
+    <button onclick="openLink('https://github.com')">
+      <img src="settings/github.png" alt="GitHub">
+    </button>
   </div>
 
   <!-- Main Buttons -->
@@ -34,13 +42,19 @@
     <button onclick="openLink('#')">Main 5</button>
   </div>
 
+  <!-- Description at bottom -->
+  <div class="description">
+    <p>⚡ ZenoMoz Hub | Chill scripts, tools, and content for free! Created by SkyeMozScriptz. ⚡</p>
+  </div>
+
   <!-- Audio -->
   <audio id="click-sound" src="settings/click.mp3"></audio>
   <audio id="select-sound" src="settings/select.mp3"></audio>
 
   <script src="script.js"></script>
+
+  <!-- Particles.js config (non-interactive) -->
   <script>
-    // Initialize non-interactive particles
     particlesJS("particles-js", {
       "particles": {
         "number": { "value": 120 },
