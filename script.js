@@ -1,21 +1,3 @@
-// Particles.js config
-particlesJS("particles-js", {
-  "particles": {
-    "number": {"value": 80},
-    "color": {"value": "#ff0000"},
-    "shape": {"type": "circle"},
-    "opacity": {"value": 0.7},
-    "size": {"value": 3},
-    "line_linked": {"enable": true,"distance": 150,"color": "#ff0000","opacity": 0.4,"width": 1},
-    "move": {"enable": true,"speed": 2,"direction": "none","random": false,"straight": false,"out_mode": "out"}
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {"onhover": {"enable": true,"mode": "repulse"},"onclick": {"enable": true,"mode": "push"}}
-  },
-  "retina_detect": true
-});
-
 // Button sounds
 const buttons = document.querySelectorAll('button');
 const clickSound = document.getElementById('click-sound');
@@ -33,6 +15,8 @@ buttons.forEach(btn => {
 });
 
 // Open links
-function openLink(url) {
-  window.open(url, '_blank');
-}
+function openLink(url) { window.open(url,'_blank'); }
+
+// Disable text selection & context menu
+document.addEventListener('contextmenu', e=>e.preventDefault());
+document.addEventListener('selectstart', e=>e.preventDefault());
