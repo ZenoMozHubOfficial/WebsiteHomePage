@@ -1,87 +1,22 @@
-/* Reset */
-* { margin:0; padding:0; box-sizing:border-box; user-select:none; -webkit-tap-highlight-color:transparent; }
+// Button sounds
+const buttons = document.querySelectorAll('button');
+const clickSound = document.getElementById('click-sound');
+const selectSound = document.getElementById('select-sound');
 
-body {
-  font-family: 'Arial', sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
+buttons.forEach(btn => {
+  btn.addEventListener('mousedown', () => {
+    selectSound.currentTime = 0;
+    selectSound.play();
+  });
+  btn.addEventListener('click', () => {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+});
 
-/* Particle Background */
-#particles-js {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background: #000;
-}
+// Open links
+function openLink(url) { window.open(url,'_blank'); }
 
-/* Logo */
-#logo {
-  text-align: center;
-  margin-top: 10vh;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-  z-index: 2;
-  position: relative;
-}
-#logo img { max-width: 200px; }
-
-/* Social Buttons */
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 5vh;
-  z-index:2;
-  position: relative;
-}
-.social-buttons button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  width: 60px;
-  height: 60px;
-  padding: 0;
-}
-.social-buttons img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-}
-.social-buttons button:hover img { transform: scale(1.1); }
-
-/* Main Buttons */
-.main-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5vh;
-  gap: 12px;
-  z-index:2;
-  position: relative;
-}
-.main-buttons button {
-  background: linear-gradient(145deg,#111,#333);
-  color: #fff;
-  border:none;
-  border-radius:12px;
-  padding:15px 40px;
-  font-size:1.2rem;
-  cursor:pointer;
-  transition: transform 0.15s ease, background 0.3s ease;
-  outline:none;
-}
-.main-buttons button:hover {
-  background: linear-gradient(145deg,#222,#555);
-  transform: scale(1.05);
-}
-.main-buttons button:active {
-  transform: scale(0.95);
-}
-
-/* Animations */
-@keyframes fadeIn { to { opacity:1; } }
+// Disable text selection & context menu
+document.addEventListener('contextmenu', e=>e.preventDefault());
+document.addEventListener('selectstart', e=>e.preventDefault());
