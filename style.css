@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none; /* disables text selection */
+  user-select: none; /* disable text selection */
+  -webkit-tap-highlight-color: transparent; /* disable mobile click highlight */
 }
 
 body {
@@ -25,11 +26,14 @@ body {
 
 /* Intro Logo */
 #logo {
-  font-size: 4rem;
   text-align: center;
   margin-top: 10vh;
   opacity: 0;
   animation: fadeIn 2s forwards;
+}
+
+#logo img {
+  max-width: 200px;
 }
 
 /* Main Content */
