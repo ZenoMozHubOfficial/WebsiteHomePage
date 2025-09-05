@@ -1,22 +1,79 @@
-// Button sounds
-const buttons = document.querySelectorAll('button');
-const clickSound = document.getElementById('click-sound');
-const selectSound = document.getElementById('select-sound');
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
-buttons.forEach(btn => {
-  btn.addEventListener('mousedown', () => {
-    selectSound.currentTime = 0;
-    selectSound.play();
-  });
-  btn.addEventListener('click', () => {
-    clickSound.currentTime = 0;
-    clickSound.play();
-  });
-});
+body {
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-// Open links
-function openLink(url) { window.open(url,'_blank'); }
+/* Particle Background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-// Disable text selection & context menu
-document.addEventListener('contextmenu', e=>e.preventDefault());
-document.addEventListener('selectstart', e=>e.preventDefault());
+/* Logo */
+#logo {
+  text-align: center;
+  margin-top: 10vh;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+#logo img {
+  max-width: 200px;
+}
+
+/* Buttons common */
+button {
+  background: linear-gradient(145deg, #111, #333);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 40px;
+  margin: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.3s ease;
+  outline: none;
+}
+
+/* Hover */
+button:hover {
+  background: linear-gradient(145deg, #222, #555);
+}
+
+/* Click/hold scale */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Social Buttons */
+.social-buttons {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+/* Main Buttons vertical */
+.main-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
