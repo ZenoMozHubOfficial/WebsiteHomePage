@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZenoMoz Hub</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Particles.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenoMoz | Vercel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
 
@@ -15,18 +14,18 @@
 
   <!-- Intro Logo -->
   <div id="logo">
-    <img src="settings/logo.png" alt="ZenoMoz Logo" />
+    <img src="settings/logo.png" alt="ZenoMoz Logo">
   </div>
 
-  <!-- Social Media Buttons (square images) -->
+  <!-- Social Media Buttons -->
   <div class="social-buttons">
-    <button onclick="openLink('https://twitter.com')"><img src="settings/twitter.png" alt="Twitter" /></button>
-    <button onclick="openLink('https://youtube.com')"><img src="settings/youtube.png" alt="YouTube" /></button>
-    <button onclick="openLink('https://discord.com')"><img src="settings/discord.png" alt="Discord" /></button>
-    <button onclick="openLink('https://github.com')"><img src="settings/github.png" alt="GitHub" /></button>
+    <button onclick="openLink('https://twitter.com')">Twitter</button>
+    <button onclick="openLink('https://youtube.com')">YouTube</button>
+    <button onclick="openLink('https://discord.com')">Discord</button>
+    <button onclick="openLink('https://github.com')">GitHub</button>
   </div>
 
-  <!-- Main Buttons (Vertical) -->
+  <!-- Main Buttons -->
   <div class="main-buttons">
     <button onclick="openLink('#')">Main 1</button>
     <button onclick="openLink('#')">Main 2</button>
@@ -39,27 +38,24 @@
   <audio id="click-sound" src="settings/click.mp3"></audio>
   <audio id="select-sound" src="settings/select.mp3"></audio>
 
-  <!-- Particle Initialization -->
+  <script src="script.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 150 },
-          color: { value: "#ff3333" },
-          shape: { type: "circle" },
-          opacity: { value: 0.6, random: true },
-          size: { value: 3, random: true },
-          line_linked: { enable: true, distance: 150, color: "#ff3333", opacity: 0.4, width: 1 },
-          move: { enable: true, speed: 1.5 }
-        },
-        interactivity: {
-          events: { onhover: { enable: true, mode: "repulse" } }
-        },
-        retina_detect: true
-      });
+    // Initialize non-interactive particles
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 120 },
+        "color": { "value": "#ff3333" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": true },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ff3333", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5, "direction": "none", "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": false }, "onclick": { "enable": false } }
+      },
+      "retina_detect": true
     });
   </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
