@@ -35,7 +35,7 @@
 
   <!-- Main Buttons -->
   <div class="main-buttons">
-    <button onclick="openLink('#')">Install</button>
+    <button onclick="downloadFile()">Install</button>
     <button onclick="openLink('#')">ChangeLogs</button>
     <button onclick="openLink('#')">Coming Soon</button>
     <button onclick="openLink('#')">Coming Soon</button>
@@ -70,6 +70,26 @@
       },
       "retina_detect": true
     });
+
+    // Open links function
+    function openLink(url) {
+      const selectSound = document.getElementById('select-sound');
+      selectSound.play();
+      window.open(url, '_blank');
+    }
+
+    // Download file function with click sound
+    function downloadFile() {
+      const clickSound = document.getElementById('click-sound');
+      clickSound.play();
+
+      const link = document.createElement('a');
+      link.href = 'settings/ZenoMozHub.zip';
+      link.download = 'ZenoMozHub.zip';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   </script>
 </body>
 </html>
