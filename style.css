@@ -1,11 +1,5 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
+* { margin:0; padding:0; box-sizing:border-box; user-select:none; -webkit-tap-highlight-color:transparent; }
 
 body {
   font-family: 'Arial', sans-serif;
@@ -14,14 +8,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Particles.js container */
+/* Particle Background */
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  inset: 0;
+  z-index: 0;
+  background: #000;
 }
 
 /* Logo */
@@ -30,51 +22,68 @@ body {
   margin-top: 10vh;
   opacity: 0;
   animation: fadeIn 2s forwards;
+  z-index: 2;
+  position: relative;
 }
+#logo img { max-width: 200px; }
 
-#logo img {
-  max-width: 200px;
-}
-
-/* Buttons common */
-button {
-  background: linear-gradient(145deg, #111, #333);
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 15px 40px;
-  margin: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.15s ease, background 0.3s ease;
-  outline: none;
-}
-
-/* Hover */
-button:hover {
-  background: linear-gradient(145deg, #222, #555);
-}
-
-/* Click/hold scale */
-button:active {
-  transform: scale(0.95);
-}
-
-/* Social Buttons */
+/* Social Buttons (image square) */
 .social-buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
   margin-top: 5vh;
+  z-index:2;
+  position: relative;
+}
+.social-buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+}
+.social-buttons img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+.social-buttons button:hover img {
+  transform: scale(1.1);
 }
 
-/* Main Buttons (vertical) */
+/* Main Buttons */
 .main-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5vh;
+  gap: 12px;
+  z-index:2;
+  position: relative;
+}
+.main-buttons button {
+  background: linear-gradient(145deg,#111,#333);
+  color: #fff;
+  border:none;
+  border-radius:12px;
+  padding:15px 40px;
+  font-size:1.2rem;
+  cursor:pointer;
+  transition: transform 0.15s ease, background 0.3s ease;
+  outline:none;
+}
+.main-buttons button:hover {
+  background: linear-gradient(145deg,#222,#555);
+  transform: scale(1.05);
+}
+.main-buttons button:active {
+  transform: scale(0.95);
 }
 
 /* Animations */
-@keyframes fadeIn {
-  to {opacity: 1;}
-}
+@keyframes fadeIn { to { opacity:1; } }
