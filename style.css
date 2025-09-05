@@ -27,7 +27,7 @@ body {
 }
 #logo img { max-width: 200px; }
 
-/* Social Buttons (image square) */
+/* Social Buttons */
 .social-buttons {
   display: flex;
   justify-content: center;
@@ -52,9 +52,7 @@ body {
   border-radius: 8px;
   transition: transform 0.2s ease;
 }
-.social-buttons button:hover img {
-  transform: scale(1.1);
-}
+.social-buttons button:hover img { transform: scale(1.1); }
 
 /* Main Buttons */
 .main-buttons {
