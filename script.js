@@ -15,8 +15,10 @@ buttons.forEach(btn => {
 });
 
 // Open links
-function openLink(url) { window.open(url,'_blank'); }
+function openLink(url) {
+  window.open(url, '_blank');
+}
 
 // Disable text selection & context menu
-document.addEventListener('contextmenu', e=>e.preventDefault());
-document.addEventListener('selectstart', e=>e.preventDefault());
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
